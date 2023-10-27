@@ -19,6 +19,9 @@ import { AdminAfterCareComponent } from './admin-after-care/admin-after-care.com
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -33,6 +36,8 @@ import { ToastrModule } from 'ngx-toastr';
     AdminRescueComponent,
     AdminPanelComponent,
     AdminAfterCareComponent,
+    NotFoundComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,7 +46,8 @@ import { ToastrModule } from 'ngx-toastr';
     HttpClientModule,
     CommonModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
