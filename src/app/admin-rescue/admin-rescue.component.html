@@ -1,11 +1,11 @@
 <app-admin-panel></app-admin-panel>
 
-<div class="main-container">
+<div class="main-container source-sans">
   <div class="container-fluid p-5 row justify-content-center">
     <div class="col-md-8">
       <h1 class="text-center">
         <div *ngIf="!editing_title[0]" (click)="startEditingTitle(0)">
-          <h1 class="text-center">
+          <h1 class="text-center nonito">
             <!-- <b>{{ title[0] }}</b> -->
             <b [innerHTML]="getSanitizedTitle(0)"></b>
           </h1>
@@ -23,7 +23,7 @@
         ></textarea>
       </h1>
       <div *ngIf="!editing_title[1]" (click)="startEditingTitle(1)">
-        <h4 class="text-center">
+        <h4 class="text-center nonito">
           <!-- <b>{{ title[1] }}</b> -->
           <b [innerHTML]="getSanitizedTitle(1)"></b>
         </h4>
@@ -44,7 +44,7 @@
       <div class="col-md-4 pb-3">
         <div class="container-fluid rounded-3 shadow bg-green p-5">
           <div *ngIf="!editing_box_1[0]" (click)="startEditingBox1(0)">
-            <h4 class="text-center pb-3">
+            <h4 class="text-center pb-3 nonito">
               <p>
                 <!-- <b>{{ box_1[0] }}</b> -->
                 <b [innerHTML]="getSanitizedBox1(0)"></b>
@@ -65,7 +65,7 @@
 
           <div *ngIf="!editing_box_1[1]" (click)="startEditingBox1(1)">
             <!-- <b>{{ box_1[1] }}</b> -->
-            <b [innerHTML]="getSanitizedBox1(1)"></b>
+            <b [innerHTML]="getSanitizedBox1(1)" class="source-sans"></b>
           </div>
 
           <textarea
@@ -205,7 +205,7 @@
       <div class="col-md-4 pb-3">
         <div class="container-fluid rounded-3 shadow bg-green p-5">
           <div *ngIf="!editing_box_2[0]" (click)="startEditingBox2(0)">
-            <h4 class="text-center pb-3">
+            <h4 class="text-center pb-3 nonito">
               
                 <!-- <b>{{ box_2[0] }}</b> -->
               <b [innerHTML]="getSanitizedBox2(0)"></b>
@@ -264,7 +264,7 @@
       <div class="col-md-4 pb-3">
         <div class="container-fluid rounded-3 shadow bg-green p-5">
           <div *ngIf="!editing_box_3[0]" (click)="startEditingBox3(0)">
-            <h4 class="text-center pb-3">
+            <h4 class="text-center pb-3 nonito">
               <p>
                 <!-- <b>{{ box_3[0] }}</b> -->
                 <b [innerHTML]="getSanitizedBox3(0)"></b>
@@ -304,7 +304,7 @@
       <div class="col-md-4 pb-3">
         <div class="container-fluid rounded-3 shadow bg-green p-5">
           <div *ngIf="!editing_box_4[0]" (click)="startEditingBox4(0)">
-            <h4 class="text-center pb-3">
+            <h4 class="text-center pb-3 nonito">
                 <!-- <b>{{ box_4[0] }}</b> -->
                 <b [innerHTML]="getSanitizedBox4(0)"></b>
             </h4>
@@ -416,7 +416,7 @@
         <div class="container-fluid rounded-3 shadow bg-green p-5">
       
           <div *ngIf="!editing_box_5[0]" (click)="startEditingBox5(0)">
-            <h4 class="text-center pb-3">
+            <h4 class="text-center pb-3 nonito">
               <!-- <p>
                 <b>{{ box_5[0] }}</b>
               </p> -->
@@ -531,8 +531,40 @@
       </div>
       <div class="col-md-4 pb-3">
         <div class="container-fluid rounded-3 shadow bg-green p-5">
-          <h4 class="text-center pb-3"><b>Spread the word!</b></h4>
-          <p class="p-0 m-0 text-justify">Inspire and</p>
+          <div *ngIf="!editing_box_6[0]" (click)="startEditingBox6(0)">
+            <h4 class="text-center pb-3 nonito">
+              <p>
+                <b [innerHTML]="getSanitizedBox6(0)"></b>
+              </p>
+            </h4>
+          </div>
+
+          <textarea
+            rows="1"
+            cols="35"
+            style="font-size: 1.3rem; font-weight: bold"
+            *ngIf="editing_box_6[0]"
+            (blur)="finishEditingBox6(0, $event)"
+            class="resizable-input"
+            (ngModelChange)="doesChange()"
+            [(ngModel)]="rescue[0].box_6[0]"
+          ></textarea>
+
+          <div *ngIf="!editing_box_6[1]" (click)="startEditingBox6(1)">
+            <p class="p-0 m-0 text-justify" [innerHTML]="getSanitizedBox6(1)"></p>
+          </div>
+
+          <textarea
+            rows="4"
+            cols="40"
+            style="font-size: 1rem"
+            *ngIf="editing_box_6[1]"
+            (blur)="finishEditingBox6(1, $event)"
+            class="resizable-input"
+            (ngModelChange)="doesChange()"
+            [(ngModel)]="rescue[0].box_6[1]"
+          ></textarea>
+          
         </div>
       </div>
     </div>

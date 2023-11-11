@@ -1,10 +1,10 @@
 <app-admin-panel></app-admin-panel>
 
-<div class="main-container">
-  <div class="container-fluid p-5 row justify-content-center">
+<div class="main-container source-sans">
+  <div class="container-fluid p-5 row justify-content-center source-sans">
     <div class="col-md-8">
       <div *ngIf="!editing_title[0]" (click)="startEditingTitle(0)">
-        <h1 class="text-center">
+        <h1 class="text-center nonito">
           <!-- <b>{{ title[0] }}</b> -->
           <b [innerHTML]="getSanitizedTitle(0)"></b>
         </h1>
@@ -22,7 +22,7 @@
       ></textarea>
 
       <div *ngIf="!editing_title[1]" (click)="startEditingTitle(1)">
-        <h4 class="text-center">
+        <h4 class="text-center nonito">
           <!-- <b>{{ title[1] }}</b> -->
           <b [innerHTML]="getSanitizedTitle(1)"></b>
         </h4>
@@ -43,7 +43,7 @@
       <div class="col-md-4 pb-3">
         <div class="container-fluid rounded-3 shadow bg-light p-5">
           <div *ngIf="!editing_box_1[0]" (click)="startEditingBox1(0)">
-            <h4 class="text-center">
+            <h4 class="text-center nonito">
               <!-- <b>{{ box_1[0] }}</b> -->
               <b [innerHTML]="getSanitizedBox1(0)"></b>
             </h4>
@@ -80,7 +80,7 @@
       <div class="col-md-4 pb-3">
         <div class="container-fluid rounded-3 shadow bg-light p-5">
           <div *ngIf="!editing_box_2[0]" (click)="startEditingBox2(0)">
-            <h4 class="text-center">
+            <h4 class="text-center nonito">
               <!-- <b>{{ box_2[0] }}</b> -->
               <b [innerHTML]="getSanitizedBox2(0)"></b>
             </h4>
@@ -117,7 +117,7 @@
       <div class="col-md-4 pb-3">
         <div class="container-fluid rounded-3 shadow bg-light p-5">
           <div *ngIf="!editing_box_3[0]" (click)="startEditingBox3(0)">
-            <h4 class="text-center">
+            <h4 class="text-center nonito">
               <!-- <b>{{ box_3[0] }}</b> -->
               <b [innerHTML]="getSanitizedBox3(0)"></b>
             </h4>
@@ -154,7 +154,7 @@
       <div class="col-md-4 pb-3">
         <div class="container-fluid rounded-3 shadow bg-light p-5">
           <div *ngIf="!editing_box_4[0]" (click)="startEditingBox4(0)">
-            <h4 class="text-center">
+            <h4 class="text-center nonito">
               <!-- <b>{{ box_4[0] }}</b> -->
               <b [innerHTML]="getSanitizedBox4(0)"></b>
             </h4>
@@ -190,7 +190,7 @@
       <div class="col-md-4 pb-3">
         <div class="container-fluid rounded-3 shadow bg-light p-5">
           <div *ngIf="!editing_box_5[0]" (click)="startEditingBox5(0)">
-            <h4 class="text-center">
+            <h4 class="text-cente nonitor">
               <!-- <b>{{ box_5[0] }}</b> -->
               <b [innerHTML]="getSanitizedBox5(0)"></b>
             </h4>
@@ -227,7 +227,7 @@
       <div class="col-md-4 pb-3">
         <div class="container-fluid rounded-3 shadow bg-light p-5">
           <div *ngIf="!editing_box_6[0]" (click)="startEditingBox6(0)">
-            <h4 class="text-center">
+            <h4 class="text-center nonito">
               <!-- <b>{{ box_6[0] }}</b> -->
               <b [innerHTML]="getSanitizedBox6(0)"></b>
             </h4>
@@ -261,11 +261,11 @@
         </div>
       </div>
     </div>
-    <div class="col-md-12">
+    <div class="col-md-12 source-sans">
       <section id="dangerousfood">
         <p class="text-big text-center"></p>
         <div *ngIf="!editing_title[2]" (click)="startEditingTitle(2)">
-          <h1 class="text-center">
+          <h1 class="text-center nonito">
             <!-- <b>{{ title[2] }}</b> -->
             <b [innerHTML]="getSanitizedTitle(2)"></b>
           </h1>
@@ -277,7 +277,7 @@
           style="font-size: 2rem; font-weight: bold"
           *ngIf="editing_title[2]"
           (blur)="finishEditingTitle(2, $event)"
-          class="resizable-input"
+          class="resizable-input nonito"
           (ngModelChange)="doesChange()"
           [(ngModel)]="aftercare[0].title[2]"
         ></textarea>
@@ -299,7 +299,7 @@
       <section id="safefood" class="row d-flex justify-content-center">
         <div class="col-md-8">
           <div *ngIf="!editing_title[3]" (click)="startEditingTitle(3)">
-            <h1 class="text-center">
+            <h1 class="text-center nonito">
               <!-- <b>{{ title[3] }}</b> -->
               <b [innerHTML]="getSanitizedTitle(3)"></b>
             </h1>
@@ -311,7 +311,7 @@
             style="font-size: 2rem; font-weight: bold"
             *ngIf="editing_title[3]"
             (blur)="finishEditingTitle(3, $event)"
-            class="resizable-input"
+            class="resizable-input nonito"
             (ngModelChange)="doesChange()"
             [(ngModel)]="aftercare[0].title[3]"
           ></textarea>
