@@ -340,9 +340,9 @@
           ></textarea>
           
           <div *ngIf="!editing_box_4[2]" (click)="startEditingBox4(2)">
-            <p class="p-0 m-0 text-justify">
+            <p class="p-0 m-0 text-justify"
+            [innerHTML]="getSanitizedBox4(2)">
               <!-- <b>{{ box_4[2] }}</b> -->
-              <b [innerHTML]="getSanitizedBox4(2)"></b>
             </p>
           </div>
 
@@ -376,9 +376,8 @@
           ></textarea>
 
           <div *ngIf="!editing_box_4[4]" (click)="startEditingBox4(4)">
-            <p class="p-0 m-0 text-justify">
+            <p class="p-0 m-0 text-justify" [innerHTML]="getSanitizedBox4(4)">
               <!-- <b>{{ box_4[4] }}</b> -->
-              <b [innerHTML]="getSanitizedBox4(4)"></b>
             </p>
           </div>
 
