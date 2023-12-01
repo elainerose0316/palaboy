@@ -34,6 +34,7 @@ export class AdminAfterCareService{
         }
 
         uploadImage1(image: FormData, fileInput: ElementRef): void {
+
                 this.http.post(`${environment.apiUrl}upload1`, image, { responseType: 'text' as 'json' }).subscribe(
                         (response) => {
                                 // Toastr here
@@ -41,7 +42,7 @@ export class AdminAfterCareService{
                                 fileInput.nativeElement.value = '';
                         }, (error) => {
                                 // Toastr here
-                                this.toastr.error('An error occurred');
+                                this.toastr.error('An error occurred' + error.error);
                         }
                 )
         }
